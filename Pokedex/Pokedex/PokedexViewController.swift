@@ -9,16 +9,23 @@
 import UIKit
 
 class PokedexViewController: UIViewController, UISearchBarDelegate {
-    
+ 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return }
+        PokemonController.fetchPokemon(for: searchTerm) { (pokemon) in
+            DispatchQueue.main.async {
+                guard let pokemon = pokemon else { return }
+                self.nameLabel.text = pokemon.name.capitalized
+                self.idLabel.text = "ID: \(pokemon.id)"
+                self.abilitiesLabel.text = "Abilities: \(pokemon.abilities.joined(separator: ", "))"
+            }
+        }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    
+    
+    
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var abilitiesLabel: UILabel!
-    
-    
 }
