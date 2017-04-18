@@ -8,9 +8,17 @@
 
 import UIKit
 
-class PokedexViewController: UIViewController {
-
+class PokedexViewController: UIViewController, UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var abilitiesLabel: UILabel!
+    
+    
 }

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pokedex View Controller-->
         <scene sceneID="csj-OM-ogl">
             <objects>
-                <viewController id="kge-vS-q5I" sceneMemberID="viewController">
+                <viewController id="kge-vS-q5I" customClass="PokedexViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KA2-bQ-iVi"/>
                         <viewControllerLayoutGuide type="bottom" id="OFs-RV-Drb"/>
@@ -53,9 +53,12 @@
                                     <constraint firstItem="FWc-a0-gwm" firstAttribute="leading" secondItem="V2P-ZG-YuO" secondAttribute="leading" constant="8" id="ilD-Hh-aiI"/>
                                 </constraints>
                             </stackView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kEQ-Hu-xxO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kEQ-Hu-xxO">
+                                <rect key="frame" x="1" y="20" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kge-vS-q5I" id="fyy-kZ-CA0"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,6 +70,11 @@
                             <constraint firstItem="V2P-ZG-YuO" firstAttribute="centerX" secondItem="R5Y-PH-KJ7" secondAttribute="centerX" id="ns1-po-mTT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="abilitiesLabel" destination="uE5-K4-SPP" id="QsM-uS-pcp"/>
+                        <outlet property="idLabel" destination="FWc-a0-gwm" id="cQp-P8-iFy"/>
+                        <outlet property="nameLabel" destination="9Mk-0S-0In" id="op3-Ri-ALT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J9E-Yi-U4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
