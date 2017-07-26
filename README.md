@@ -7,11 +7,11 @@ This is an app where you can search for any Pokemon and have it show you details
 * URLSession
 * REST API
 * UIKit
+* UISearchBar
 
 ### Features
-* Launch Screen uses core animation to have the title swing in from the right to the left.
-* User has multiple text fields where they enter in the appropriate values and the app calculates the desired information.
-* Not only does split up the the "Total" cost, but also calculates the tip (if desired) and can split that up as well. 
+* SearchBar where the user can enter the name of any Pokemon and receive information about it in an instant.
+* Labels embedded in a stack view to ensure the labels are displayed properly within the view.
 
 ### Disclaimer
 Pokedex is a personal project created to learn and practice iOS development. It is currently open source to use as a resource for Swift development.
